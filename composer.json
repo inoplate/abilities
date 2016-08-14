@@ -1,0 +1,28 @@
+{
+    "name": "inoplate/abilities",
+    "description": "A laravel package to manage user abilities",
+    "keywords": ["abilities", "config", "authorization", "database"],
+    "type": "composer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohammad Roseffendi",
+            "email": "oii@roseffendi.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Inoplate\\Abilities\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev":{
+        "laravel/laravel": "dev-develop"
+    }
+}
