@@ -17,12 +17,12 @@
     },
     "autoload-dev": {
         "classmap": [
-            "tests/"
+            "tests"
         ]
     },
     "minimum-stability": "dev",
-    "require": {},
     "require-dev":{
-        "laravel/laravel": "dev-develop"
+        "laravel/laravel": "5.3.*",
+        "phpunit/phpunit": "^5.5"
     }
 }

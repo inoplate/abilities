@@ -1,6 +1,9 @@
 <?php
 
-abstract class TestCase extends Illuminate\Foundation\Testing\TestCase
+use Inoplate\Abilities\AbilitiesServiceProvider;
+use Illuminate\Foundation\Testing\TestCase as LaravelTestCase;
+
+abstract class TestCase extends LaravelTestCase
 {
     /**
      * The base URL to use while testing the application.

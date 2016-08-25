@@ -12,10 +12,10 @@
 */
 
 $app = new Illuminate\Foundation\Application(
-    realpath(__DIR__.'/../../../vendor/laravel/laravel')
+    realpath(__DIR__.'/../../vendor/laravel/laravel')
 );
 
-$app->useEnvironmentPath(realpath(__DIR__.'/../../..'));
+$app->useEnvironmentPath(realpath(__DIR__.'/../..'));
 $app->loadEnvironmentFrom('.env.testing');
 
 /*
@@ -43,6 +43,10 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
+
+$app->register(\Inoplate\Abilities\AbilitiesServiceProvider::class);
+
+$app['events']->listen('bootstrapped: Illuminate\Foundation\Bootstrap\LoadConfiguration', 'TestingLoadConfigurationListener');
 
 /*
 |--------------------------------------------------------------------------
